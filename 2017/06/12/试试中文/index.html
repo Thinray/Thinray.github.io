@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/12/试试中文/index.html">
 <meta property="og:site_name" content="Thinray的个人博客">
 <meta property="og:description" content="$ hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d 我只说我自己遇到的这些坑。$ hexo deploy 后提示You should configure deployment settings in _config.yml first! Available deployer plugins:git For more help, you can chec">
-<meta property="og:updated_time" content="2017-06-12T04:20:05.000Z">
+<meta property="og:updated_time" content="2017-06-12T04:29:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo的那些坑">
 <meta name="twitter:description" content="$ hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d 我只说我自己遇到的这些坑。$ hexo deploy 后提示You should configure deployment settings in _config.yml first! Available deployer plugins:git For more help, you can chec">
@@ -328,6 +328,7 @@
 <p>deploy:<br>type: git<br>repository: git@github.com:Thinray/Thinray.github.io.git<br>branch: master<br>看官们看出错误点了么，deploy后的节点没有缩进。<br>正确的写法：</p>
 <p>deploy:<br>  type: git<br>  repository: git@github.com:Thinray/Thinray.github.io.git<br>  branch: master</p>
 <p>还有弄SSH的时候，不要让其只读，否则有这个错误。<br>ERROR: The key you are authenticating with has been marked as read only.<br>fatal: Could not read from remote repository.</p>
+<p>生成SSH秘钥步骤<br>$ cd ~/.ssh<br>$ ssh-keygen -t rsa -C “填写你自己的email地址”<br>提示输入密码可以直接敲回车跳过。<br>秘钥就生成成功了，把id_rsa.pub文件中的内容全部复制进github中就可以了。</p>
 
       
     </div>

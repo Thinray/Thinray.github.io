@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/12/试试中文/index.html">
 <meta property="og:site_name" content="Thinray的个人博客">
 <meta property="og:description" content="$ hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d 我只说我自己遇到的这些坑。$ hexo deploy 后提示You should configure deployment settings in _config.yml first! Available deployer plugins:git For more help, you can chec">
-<meta property="og:updated_time" content="2017-06-12T04:04:25.000Z">
+<meta property="og:updated_time" content="2017-06-12T04:08:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo的那些坑">
 <meta name="twitter:description" content="$ hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d 我只说我自己遇到的这些坑。$ hexo deploy 后提示You should configure deployment settings in _config.yml first! Available deployer plugins:git For more help, you can chec">
@@ -325,8 +325,9 @@
 <p>Available deployer plugins:<br>git</p>
 <p>For more help, you can check the online docs: <a href="http://hexo.io/" target="_blank" rel="external">http://hexo.io/</a></p>
 <p>下面贴出_config.yml文件内容。</p>
-<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>type: git<br>repository: git@github.com:Thinray/Thinray.github.io.git<br>branch: master<br>看官们看出错误点了么，deploy后的节点没有缩进。<br>正确的写法：</p>
-<h1 id="Deployment-1"><a href="#Deployment-1" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html-1"><a href="#Docs-https-hexo-io-docs-deployment-html-1" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>&amp;nbsp；&amp;nbsp；type: git<br>&amp;nbsp；&amp;nbsp；repository: git@github.com:Thinray/Thinray.github.io.git<br>&amp;nbsp；&amp;nbsp；branch: master<br>还有弄SSH的时候，不要让其只读，否则有这个错误。<br>ERROR: The key you are authenticating with has been marked as read only.<br>fatal: Could not read from remote repository.</p>
+<p>deploy:<br>type: git<br>repository: git@github.com:Thinray/Thinray.github.io.git<br>branch: master<br>看官们看出错误点了么，deploy后的节点没有缩进。<br>正确的写法：</p>
+<p>deploy:<br>  type: git<br>  repository: git@github.com:Thinray/Thinray.github.io.git<br>  branch: master</p>
+<p>还有弄SSH的时候，不要让其只读，否则有这个错误。<br>ERROR: The key you are authenticating with has been marked as read only.<br>fatal: Could not read from remote repository.</p>
 
       
     </div>
@@ -422,17 +423,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -476,22 +468,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Deployment"><span class="nav-number">1.</span> <span class="nav-text">Deployment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docs-https-hexo-io-docs-deployment-html"><span class="nav-number">1.1.</span> <span class="nav-text">Docs: https://hexo.io/docs/deployment.html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deployment-1"><span class="nav-number">2.</span> <span class="nav-text">Deployment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docs-https-hexo-io-docs-deployment-html-1"><span class="nav-number">2.1.</span> <span class="nav-text">Docs: https://hexo.io/docs/deployment.html</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
